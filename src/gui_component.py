@@ -15,7 +15,7 @@ def display_dish_details(parent, dish_name, dish_manager):
     dish_details = dish_manager.get_dish_details(dish_name)
     dpg.add_text(f"Dish Name: {dish_details['name']}", parent=parent)
     dpg.add_text(f"Price: {dish_details['price']}$", parent=parent)
-    dpg.add_text(f"Origin: {', '.join(dish_details['origin'])}", parent=parent)
+    dpg.add_text(f"Origin: {', '.join(dish_details['origins'])}", parent=parent)
     dpg.add_text(f"Category: {dish_details['category']}", parent=parent)
     dpg.add_text("Ingredients:", parent=parent)
 
