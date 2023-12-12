@@ -48,7 +48,7 @@ class Gui:
     def on_apply_filter(self):
         with dpg.mutex():
             dpg.delete_item("filter_id", children_only=True)
-            self.current_dishes = dish.get_dishes(*get_filter_values())
+            self.current_dishes = dish.get_dishes_name(*get_filter_values())
             for d in self.current_dishes:
                 dpg.add_selectable(label=d, filter_key=d, parent="filter_id", tag=d,
                                    callback=self.on_select)

@@ -44,7 +44,7 @@ def get_dishes_details():
     }
 
 
-def get_dishes(category, origin, show_unavailable):
+def get_dishes_name(category, origin, show_unavailable):
     query = "SELECT id FROM dish" if show_unavailable else queries["available_dish"]
 
     if category:

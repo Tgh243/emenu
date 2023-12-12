@@ -46,7 +46,8 @@ queries = {
     """
     SELECT dish.id 
     FROM dish 
-    WHERE category_id={category_id}""",
+    WHERE category_id={category_id}
+    """,
 
     "origin_filter":
     """
@@ -54,7 +55,7 @@ queries = {
     FROM dish_origin
     WHERE origin_id IN ({origin_ids})
     GROUP BY dish_id
-    HAVING COUNT(origin_id)={len)}
+    HAVING COUNT(origin_id)={len}
     """
 
 }
