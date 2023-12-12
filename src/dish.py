@@ -54,7 +54,7 @@ def get_dishes(category, origin, show_unavailable):
 
     if origin:
         origin_ids = [get_id(o, "origin") for o in origin]
-        origin_filter = queries['origin_filter'].format(origin_ids=','.join(str(id) for id in origin_ids),
+        origin_filter = queries['origin_filter'].format(origin_ids=','.join(str(o_id) for o_id in origin_ids),
                                                         len=len(origin_ids))
         query += f" INTERSECT ({origin_filter})"
 
