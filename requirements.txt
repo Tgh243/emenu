@@ -1,0 +1,4 @@
+PyYAML
+PyMySQL
+dearpygui
+dearpygui_ext
